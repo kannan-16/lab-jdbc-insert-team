@@ -12,7 +12,7 @@ import model.Team;
 
 public class Main {
 	
-	public static void main(String args[]) throws IOException, ClassNotFoundException, SQLException {
+	public static void main(String args[]) throws Exception {
 		
 		CityDAO citydao = new CityDAO();
 		TeamDAO teamdao = new TeamDAO();
@@ -42,6 +42,7 @@ public class Main {
 		Team team = new Team(id_team, name, coachName,id,captianName);
 		
 		teamdao.createTeam(team);
+		citydao.createCity(city);
 				
 	}
 }
